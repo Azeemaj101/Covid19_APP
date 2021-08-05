@@ -1,0 +1,106 @@
+body {
+    background-image: url("/partials/2.jpeg");
+    /* The image used */
+    background-color: #cccccc;
+    /* Used if the image is unavailable */
+    height: 100vh;
+    /* You must set a specified height */
+    background-position: center;
+    /* Center the image */
+    background-repeat: no-repeat;
+    /* Do not repeat the image */
+    background-size: cover;
+    /* Resize the background image to cover the entire container */
+    backdrop-filter: blur(1px);
+    background-attachment: fixed;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+
+/* Track */
+
+ ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+
+/* Handle */
+
+ ::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+
+/* Handle on hover */
+
+ ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+header img {
+    width: 80px;
+    height: 130px;
+}
+
+.countryCode {
+    font-size: 12px;
+}
+
+.flag {
+    background: rgb(255, 0, 0);
+    background: radial-gradient(circle, rgba(255, 0, 0, 0.4920343137254902) 0%, rgba(12, 13, 12, 0.33237044817927175) 35%, rgba(255, 0, 0, 0.5088410364145659) 100%);
+    box-shadow: 5px 5px 15px rgb(163, 163, 163);
+}
+
+header {
+    display: flex;
+    justify-content: start;
+}
+
+@media screen and (max-width: 450px) {
+    header {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.img2 {
+    width: 75px;
+    height: 75px;
+}
+
+.numberDisplay {
+    display: block;
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    height: 60px;
+}
+
+.numberDisplay p {
+    height: 50px;
+}
+
+.data {
+    height: 70px;
+}
+
+.data-box {
+    background: rgb(255, 0, 0);
+    background: radial-gradient(circle, rgba(255, 0, 0, 0.4920343137254902) 0%, rgba(12, 13, 12, 0.33237044817927175) 35%, rgba(255, 0, 0, 0.5088410364145659) 100%);
+    box-shadow: 5px 5px 15px rgb(163, 163, 163);
+}
+
+.icon {
+    color: white;
+}
+
+.icon:hover {
+    color: rgb(255, 0, 0);
+    width: 25px;
+    height: 20px;
+}

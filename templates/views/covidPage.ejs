@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" href="public/covid.css">
+    <title>
+        <%- covid1.countryInfo.iso2 %> | Corona Cases</title>
+    <link rel="icon" href="/partials/hazmat.png" type="image/x-icon">
+    <script type="module" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.esm.js"></script>
+
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script> -->
+</head>
+
+<body>
+    <header class="p-3">
+        <div class="card flag  mb-3 rounded-1" style="min-width: 20rem; min-height: 12rem; max-width: 30rem; max-height: 20rem;">
+            <div class="d-flex justify-content-center align-items-center flex-column card-body">
+                <img src="<%- covid1.countryInfo.flag %>" class="card-img-top rounded" alt="...">
+                <div>
+                    <span class="fs-2 fw-bold text-light"><%- covid1.country%></span><span class="countryCode fw-bold text-light"><%- covid1.countryInfo.iso2 %> | <%- covid1.continent %></span>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="d-flex justify-content-center align-items-center flex-row px-2 flex-wrap">
+
+        <div class=" text-light card data-box p-3 m-2 " style="width: 18rem; height: 10rem;">
+            <div class="d-flex justify-content-center data">
+                <span class="fs-4 fw-bold">
+                        <p> CONFIRM CASES </p>
+                    </span>
+                <span class="w-75 h-75 d-flex justify-content-end">
+                        <img src="/partials/diagnosed-cases.png" class="card-img-top img2 rounded" alt="...">
+                    </span>
+            </div>
+            <div class="numberDisplay fw-bold">
+                <p class="counter">
+                    <%- covid1.cases %>
+                </p>
+            </div>
+        </div>
+        <div class="text-light card data-box p-3 m-2" style="width: 18rem; height: 10rem;">
+            <div class="d-flex justify-content-center flex-row data">
+                <span class="fs-4 fw-bold">
+                        DEATHS
+                    </span>
+                <span class="w-75 h-75 d-flex justify-content-end">
+                        <img src="/partials/DEATHS.png" class="card-img-top img2 rounded" alt="...">
+                    </span>
+            </div>
+            <div class="numberDisplay fw-bold">
+                <p class="counter">
+                    <%- covid1.deaths %>
+                </p>
+            </div>
+        </div>
+        <div class="text-light card data-box p-3 m-2" style="width: 18rem; height: 10rem;">
+            <div class="d-flex justify-content-center flex-row data">
+                <span class="fs-4 fw-bold">
+                    RECOVERED
+                    </span>
+                <span class="w-75 h-75 d-flex justify-content-end">
+                        <img src="/partials/RECOVERED.png" class="card-img-top img2 rounded" alt="...">
+                    </span>
+            </div>
+            <div class="numberDisplay fw-bold">
+                <p class="counter">
+                    <%- covid1.recovered %>
+                </p>
+            </div>
+        </div>
+        <div class="text-light card data-box p-3 m-2" style="width: 18rem; height: 10rem;">
+            <div class="d-flex justify-content-center flex-row data">
+                <span class="fs-4 fw-bold">
+                    CRITICAL CASES
+                    </span>
+                <span class="w-75 h-75 d-flex justify-content-end">
+                        <img src="/partials/critical.png" class="card-img-top img2 rounded" alt="...">
+                    </span>
+            </div>
+            <div class="numberDisplay fw-bold">
+                <p class="counter">
+                    <%- covid1.critical %>
+                </p>
+            </div>
+        </div>
+        <div class="text-light card data-box p-3 m-2" style="width: 18rem; height: 10rem;">
+            <div class="d-flex justify-content-center flex-row data">
+                <span class="fs-4 fw-bold">
+                    TODAY CASES
+                    </span>
+                <span class="w-75 h-75 d-flex justify-content-end">
+                        <img src="/partials/recovered1.png" class="card-img-top img2 rounded" alt="...">
+                    </span>
+            </div>
+            <div class="numberDisplay fw-bold">
+                <p class="counter">
+                    <%- covid1.todayCases %>
+                </p>
+            </div>
+        </div>
+        <div class="text-light card data-box p-3 m-2" style="width: 18rem; height: 10rem;">
+            <div class="d-flex justify-content-center flex-row data">
+                <span class="fs-4 fw-bold">
+                    TODAY DEATHS
+                    </span>
+                <span class="w-75 h-75 d-flex justify-content-end">
+                        <img src="/partials/deaths1.png" class="card-img-top img2 rounded" alt="...">
+                    </span>
+            </div>
+            <div class="numberDisplay fw-bold">
+                <p class="counter">
+                    <%- covid1.todayDeaths %>
+                </p>
+            </div>
+        </div>
+        <div class="text-light card data-box p-3 m-2" style="width: 18rem; height: 10rem;">
+            <div class="d-flex justify-content-center flex-row data">
+                <span class="fs-4 fw-bold">
+                    TODAY RECOVERY
+                    </span>
+                <span class="w-75 h-75 d-flex justify-content-end">
+                        <img src="/partials/trecovered.png" class="card-img-top img2 rounded" alt="...">
+                    </span>
+            </div>
+            <div class="numberDisplay fw-bold">
+                <p class="counter">
+                    <%- covid1.todayRecovered %>
+                </p>
+            </div>
+        </div>
+        <div class="text-light card data-box p-3 m-2" style="width: 18rem; height: 10rem;">
+            <div class="d-flex justify-content-center flex-row data">
+                <span class="fs-4 fw-bold">
+                    ACTIVE CASES
+                    </span>
+                <span class="w-75 h-75 d-flex justify-content-end">
+                        <img src="/partials/active-cases.png" class="card-img-top img2 rounded" alt="...">
+                    </span>
+            </div>
+            <div class="numberDisplay fw-bold">
+                <p class="counter">
+                    <%- covid1.active %>
+                </p>
+            </div>
+        </div>
+    </main>
+    <footer class="fw-bold fs-6 d-flex justify-content-center text-light p-1">
+        Copyright © 2021
+        <% if (year !== 2021) {%>
+            -
+            <%- year %>
+                <% } %>
+                    <a href="https://github.com/Azeemaj101" target="_blank" rel="noopener noreferrer">
+                        <ion-icon name="logo-github" class="icon"></ion-icon>
+                    </a>
+    </footer>
+    <!-- <section class="d-flex justify-content-center">
+        <iframe src="https://public.domo.com/cards/bWxVg" class="rounded" width="300px" height="300px" marginheight="0" marginwidth="0" frameborder="0"></iframe>
+    </section> -->
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
+    -->
+    <!-- <script>
+        $(document).ready(function() {
+            $(".counter").counterUp({
+                delay: 12,
+                time: 1000
+            });
+        });
+    </script> -->
+</body>
+
+</html>

@@ -1,0 +1,74 @@
+body {
+    background-image: url("/partials/1.jpeg");
+    /* The image used */
+    background-color: #cccccc;
+    /* Used if the image is unavailable */
+    height: 100vh;
+    /* You must set a specified height */
+    background-position: center;
+    /* Center the image */
+    background-repeat: no-repeat;
+    /* Do not repeat the image */
+    background-size: cover;
+    /* Resize the background image to cover the entire container */
+    backdrop-filter: blur(1px);
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+
+/* Track */
+
+ ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+
+/* Handle */
+
+ ::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+
+/* Handle on hover */
+
+ ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+main {
+    height: 100vh;
+}
+
+.innerdiv {
+    background: rgb(235, 13, 42);
+    background: radial-gradient(circle, rgba(235, 13, 42, 0.33237044817927175) 0%, rgba(10, 219, 11, 0.2511379551820728) 100%);
+}
+
+.imgicon {
+    width: 150px;
+    height: 150px;
+}
+
+.Selectfield {
+    background-color: transparent;
+    outline: transparent;
+    color: rgb(0, 0, 0);
+    text-shadow: 2px 2px 5px rgb(255, 255, 255);
+    border: 1px solid black;
+}
+
+.Selectfield:hover {
+    background-color: rgb(29, 29, 29);
+    outline: transparent;
+    color: rgb(255, 255, 255);
+    text-shadow: none;
+    border: 1px solid black;
+}
+
+.Selectfield option {
+    background-color: rgb(89, 206, 95);
+}
